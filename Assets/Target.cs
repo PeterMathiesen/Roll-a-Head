@@ -11,6 +11,7 @@ public class Target : MonoBehaviour {
     {
         target = GetComponent<Rigidbody>();
         MoveToNewPosition();
+
     }
 	
 	// Update is called once per frame
