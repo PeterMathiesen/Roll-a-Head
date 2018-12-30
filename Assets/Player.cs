@@ -40,7 +40,7 @@ public class Player : MonoBehaviour {
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "Bottle")
+        if (collision.gameObject.name == "Burger")
         {
             points += 10;
             PointText.GetComponent<UnityEngine.UI.Text>().text = points.ToString();
