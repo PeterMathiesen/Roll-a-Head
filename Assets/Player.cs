@@ -33,7 +33,7 @@ public class Player : MonoBehaviour {
 	void FixedUpdate () {
         float moveX = Input.GetAxis("Horizontal");
         float moveY = Input.GetAxis("Vertical");
-        float speed = 15;
+        float speed = 50;
         Vector3 move = new Vector3(moveX*speed, 0.0f ,moveY*speed);
         player.AddForce(move);
     }
