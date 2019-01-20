@@ -22,6 +22,7 @@ public class Target : MonoBehaviour {
     public void MoveToNewPosition()
     {
         target.velocity = Vector3.zero;
-        target.position = new Vector3(Random.Range(-8.0f, 8.0f), 2.0f, Random.Range(-8.0f, 8.0f));
+        target.position = new Vector3(Random.Range(-8.0f, 8.0f), 2.0f, Random.Range(-5.0f, -8.0f));
+        target.position = new Vector3(Random.Range(-8.0f, 8.0f), 2.0f, Random.Range(5.0f, 8.0f));
     }
 }
