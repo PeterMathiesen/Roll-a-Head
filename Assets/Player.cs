@@ -7,16 +7,18 @@ public class Player : MonoBehaviour {
     public int Lives;
     public GameObject LifeSprite;
     public GameObject PointText;
+    public List<Vector3> startLocations;
 
     private Rigidbody player;
-    private Vector3 startLocation;
     private List<GameObject> lifeSprites = new List<GameObject>();
     private int points = 0;
+    private System.Random random;
 
     // Use this for initialization
     void Start() {
+        random = new System.Random();
         player = GetComponent<Rigidbody>();
-        startLocation = player.position;
+        player.position = startLocations[random.Next(4)];
 
         lifeSprites.Add(LifeSprite);
         int counter = 1;
@@ -59,7 +61,7 @@ public class Player : MonoBehaviour {
         }
         else
         {
-            player.position = startLocation;
+            player.position = startLocations[random.Next(4)];
             player.velocity = Vector3.zero;
             lifeSprites[lifeSprites.Count - 1].SetActive(false);
             lifeSprites.RemoveAt(lifeSprites.Count - 1);
